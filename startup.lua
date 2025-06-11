@@ -1,7 +1,7 @@
 -- AQOS Startup - prosty system bootowania
 -- Zgodnie z filozofią: minimalizm, czytelność, prostota
 
-local GITHUB_BASE = "https://raw.githubusercontent.com/twoj-username/aqos/main/"
+local GITHUB_BASE = "https://raw.githubusercontent.com/Bavatek/AQOS"
 local CURRENT_VERSION = "1.0.0"
 
 -- Lista wymaganych plików w folderze core
