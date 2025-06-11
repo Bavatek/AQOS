@@ -67,7 +67,16 @@ end
 if not check_version() then
     print("Downloading files...")
     for _, file in ipairs(files) do
-        if not fs.exists(file) or file == "AQOS/version.txt" then
+        if not download(file) then
+            print("ERROR: " .. file)
+            return
+        end
+    end
+else
+    -- Sprawdz czy wszystkie pliki istnieja
+    for _, file in ipairs(files) do
+        if not fs.exists(file) then
+            print("Missing file, downloading...")
             if not download(file) then
                 print("ERROR: " .. file)
                 return
